@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+     /*
+     const product = {
+      name: 'socks',
+      price: 1090,
+      currency: 'USD',
+     };
+     console.log(product);
+     console.log(product.name);
+     console.log(product.price);
+     console.log(product.currency);
+
+     product.name = 'cotton socks';
+     console.log(product);
+
+     product.price = '2500';
+     console.log(product);
+
+     product.newProperty = true;
+     console.log(product);
+
+     delete product.newProperty;
+     console.log(product);
+     */
+
+    /*
+     const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      'product-number': '3597',
+      rating: {
+        stars: 4.5,
+        count: 87,
+        percent: 84,
+      },
+      fun: function function1() {
+        console.log('function inside object');
+      }
+     };
+     console.log(product2);
+     console.log(product2.name);
+     console.log(product2['name']);
+     console.log(product2['delivery-time']);
+     console.log(product2['product-number']);
+
+     console.log(product2.rating.count);
+     console.log(product2.rating.percent);
+     product2.fun();
+
+     console.log(typeof console);
+     console.log(typeof console.log);
+
+     //in Math.random, MATH IS AN OBJECT while RANDOM IS A FUNCTION, therefore math.random is a method.
+
+     console.log(JSON.stringify(product2));
+
+     const jsonString = JSON.stringify(product2);
+     console.log(JSON.parse(jsonString));
+     */
+
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());
+
+     // creating a new variable with an object
+     const object1 = {
+      message: 'hello'
+     };
+     // this code doesnt make a copy of the object but points to the reference inside object1
+     const object2 = object1;
+     // to change the property message in object1
+     object1.mesage = 'weldone!';
+     console.log(object1);
+     console.log(object2); //this has the same property as object1.
+
+     // you cant compare objects directly, e.g
+     const object3 = {
+      message: 'weldone'
+     };
+     console.log(object3 === object1);
+     console.log(object2 === object1);
+    
+       const object4 = {
+      message: 'weldone',
+      price: 799
+     };
+     // destructuring takes a message property out of object4 and save it in a variable called message, the both are the same.
+
+    // const message = object4.message;
+     const{ message, price } = object4;
+     console.log(message);
+     console.log(price);
+
+     const object5 = {
+     // message: message (this is shorthand property)
+      message,
+     //  method: function function1() {
+     //  console.log('method');
+     // }
+      method() {
+        console.log('method');
+      }
+     };
+     console.log(object5);
+     object5.method();
+    </script>
+  </body>
+  </html>

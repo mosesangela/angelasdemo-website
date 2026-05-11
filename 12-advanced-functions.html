@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+
+  <body>
+    <!-- how to use addEventListener on a button-->
+
+    <button onclick="" class="js-button">Click</button>
+
+
+
+    <script>
+      /*
+      const buttonElement = document.querySelector('.js-button');
+
+       const eventListener =  () => {
+        console.log('click');
+      };
+
+      buttonElement.addEventListener('click', eventListener);
+
+     
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click',() => {
+        console.log('click2');
+      });
+      */
+
+      /*
+      // advantages of this type of function is that its easier to read and it gives us a feature called HOISTING, meaning that you can call the function (greeting();) before (at the top) creating it in the code. Hoisting doesnt work when we create our function inside a variable.
+      function greeting() {
+        console.log('hello');
+      }
+      greeting();
+
+      const num = 2;
+
+      // saving a function inside a variable called function1
+      const function1 = function()
+       // greeting() this function name not needed  
+      {
+        console.log('hello2');
+      };
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      // saving a value in an object including function
+      const object1 = {
+        num: 2,
+        fun: function() // greeting() anonymous funct meaning no name
+         {
+          console.log('hello3');
+         }
+      };
+      object1.fun();
+
+      // passing a value into a function
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      // passing a function into a function because they are also values eg
+      function run(param) {
+        param();
+      }
+      run(function() {
+        console.log('hello4');
+      }); 
+      */
+
+      /*
+      // Asynchronous code which is aidded by setTimeout
+      setTimeout(function() {
+        console.log('timeout');
+        console.log('timeout2');
+      }, 3000);
+
+      console.log('next line');
+
+      setInterval(function() {
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2');
+      */
+
+      /*
+       // .forEach loop, you can skip a value in forEach using the return statement and to use an arrow function in forEach jst remove the word function and then add an arrow function (=>) after the values.
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach((value, index) => {
+        if (value === 'wash dishes') {
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+
+      // comparing btwn normal and arrow function
+       const regularFunction = function(param, param2) {
+        console.log('hello');
+        return 5;
+       };
+       regularFunction();
+
+      // ARROW FUNCTION
+      const arrowFunction = (param, param2) => {
+        console.log('hello');
+        return 5;
+      };
+      arrowFunction();
+       
+      // shortcuts for arrow function
+      const oneParam = param => {
+        console.log(param + 1);
+      };
+      oneParam(2);
+
+      const oneLine = () => 2 + 3;
+         console.log(oneLine());
+
+         // arrow function inside an object 
+      const object2 = {
+        method: () => {
+
+        },
+        method() {               // this is shirthand method synthax
+
+        }
+      };
+      */
+
+      console.log([1, -3, 5].filter((value, index) => {
+        if (value >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+        // return value >= 0; this is the short way to return a value in .filter which does the same thing as the above.
+      }));
+
+       
+      console.log([1, 1, 3].map((value, index) => {
+        return value * 2;
+      }));
+
+       console.log([1, 1, 3].map(value => value * 2)); // this is a shortcut to the .map() code above.
+       
+    </script>
+  </body>
+</html>
